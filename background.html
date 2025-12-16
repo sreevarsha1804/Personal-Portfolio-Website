@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education</title>
+
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <style>
+    .timeline-container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .timeline-title {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 60px;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+      border-left: 4px solid #4da6ff;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      padding-left: 40px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -54px;
+      top: 8px;
+      width: 20px;
+      height: 20px;
+      background: #4da6ff;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #4da6ff;
+    }
+
+    .timeline-item h2 {
+      font-size: 28px;
+      color: #4da6ff;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item h3 {
+      font-size: 22px;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .timeline-item p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #dddddd;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html" style="color:#fff; text-decoration:none;">SreeVarsha AS</a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="portfolio.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <button class="cv-btn" onclick="DownloadCV()">Download CV</button>
+  </nav>
+</header>
+
+<section class="timeline-container">
+
+  <h1 class="timeline-title">Education Timeline</h1>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h2>High School</h2>
+      <h3>Velammal Main, Mogappair</h3>
+      <p>Board Examination Percentage: <strong>98.9%</strong></p>
+    </div>
+
+    <div class="timeline-item">
+      <h2>Higher Secondary</h2>
+      <h3>Velammal Main, Mogappair</h3>
+      <p>Board Examination Percentage: <strong>94%</strong></p>
+    </div>
+
+    <div class="timeline-item">
+      <h2>B.Tech – Artificial Intelligence & Data Science</h2>
+      <h3>Sri Venkateswara College of Engineering, Sriperumbudur</h3>
+      <p>Current CGPA: <strong>8.5</strong></p>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/script.js"></script>
+
+<!-- Footer placeholder -->
+<div id="footer"></div>
+
+<!-- Script to load footer -->
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>

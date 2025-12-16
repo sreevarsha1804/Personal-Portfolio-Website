@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Response message style -->
+  <style>
+    #response {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+    #response.error {
+      color: red;
+    }
+
+    /* Map styling */
+    .map-container {
+      max-width: 500px;
+      margin: 30px auto;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 0 25px #010627;
+    }
+
+    .location-text {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html">SreeVarsha AS</a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="background.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="portfolio.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <button class="cv-btn" onclick="DownloadCV()">Download CV</button>
+  </nav>
+</header>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-form">
+  <h1>Get In Touch</h1>
+
+  <!-- Location -->
+  <p class="location-text">
+    📍 Chennai, Tamil Nadu, India
+  </p>
+
+  <!-- Google Map -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=Chennai,Tamil Nadu,India&output=embed"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Contact Card -->
+  <div class="contact-card">
+    <form id="contactForm">
+
+      <!-- IMPORTANT: name attributes kept SAME for backend -->
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="response"></div>
+  </div>
+</section>
+
+<!-- ================= BACKEND SCRIPT (UNCHANGED) ================= -->
+<script>
+const form = document.getElementById('contactForm');
+const responseDiv = document.getElementById('response');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch("https://script.google.com/macros/s/AKfycbxqTPQBWLA81RDAuOfjDNeVpTjsy3K_EbtrpjflvWD3e0Oh-I4pqkOjXm8Wla06L1I2OQ/exec", {
+    method: "POST",
+    body: new URLSearchParams(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    responseDiv.innerHTML = data.message;
+    responseDiv.classList.toggle("error", data.status === "error");
+    if (data.status === "success") form.reset();
+  })
+  .catch(error => {
+    responseDiv.innerHTML = "❌ There was an error sending your message.";
+    responseDiv.classList.add("error");
+    console.error("Error:", error);
+  });
+});
+</script>
+
+<script src="js/script.js"></script>
+
+<!-- Footer placeholder -->
+<div id="footer"></div>
+
+<!-- Script to load footer -->
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>

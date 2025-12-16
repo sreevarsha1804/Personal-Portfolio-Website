@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SreeVarsha Portfolio</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <style>
+    /* --- BASIC RESET & BODY --- */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #f8f8f8;
+    }
+
+    /* --- NAVBAR --- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Glass Logo */
+    .glass-logo {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 24px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .glass-logo:hover {
+      transform: scale(1.2);
+    }
+
+    .logo a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Navbar links */
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #f8f8f8;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #8683c4;
+    }
+
+    .cv-btn {
+      background-color: #050241;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cv-btn:hover {
+      background-color: #030355;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 50px;
+    }
+
+    .hero-left {
+      flex: 1;
+      min-width: 300px;
+      padding-right: 50px;
+    }
+
+    .hero-left h1 {
+      font-size: 48px;
+      margin: 0 0 15px 0;
+    }
+
+    .hero-left h1 span {
+      color: #ffffff; /* White name */
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .hero-left h3 {
+      font-weight: 400;
+      color: #ccc;
+      margin: 5px 0 20px 0;
+    }
+
+    .intern {
+      font-style: italic;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .hero-left p {
+      color: #ddd;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, #060344, #1a1a6b);
+      color: #fff;
+    }
+
+    .primary-btn:hover {
+      background: linear-gradient(135deg, #1a1a6b, #060344);
+    }
+
+    .secondary-btn {
+      background-color: transparent;
+      color:#fff;
+      border: 2px solid #060344;
+    }
+
+    .secondary-btn:hover {
+      background-color: #060344;
+      color: #fff;
+    }
+
+    .hero-right {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+    }
+
+    /* --- PROFILE IMAGE --- */
+    .hero-right .circle {
+      width: 300px; /* Bigger */
+      height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-block;
+      border: 4px solid #060344;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      background: linear-gradient(135deg, #060344, #1a1a6b);
+      transition: transform 0.3s;
+    }
+
+    .hero-right .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .hero-right .circle:hover img {
+      transform: scale(1.05);
+    }
+
+    /* --- ABOUT BRIEF --- */
+    .about-brief {
+      max-width: 900px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .about-brief h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #060344;
+    }
+
+    .about-brief p {
+      font-size: 22px;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    /* --- SOCIAL ICONS --- */
+    .social-icons a {
+      margin: 0 15px;
+      color: #060344;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        padding: 50px 20px;
+      }
+      .hero-left, .hero-right {
+        padding: 0;
+        text-align: center;
+      }
+      .hero-left h1 {
+        font-size: 36px;
+      }
+      .hero-left p, .hero-left h3 {
+        font-size: 18px;
+      }
+      .hero-right .circle {
+        width: 250px;
+        height: 250px;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <div class="glass-logo">S</div>
+    </a>
+  </div>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="background.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="portfolio.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <button class="cv-btn" onclick="DownloadCV()">Download CV</button>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Hi, I'm <br><span>SreeVarsha AS</span></h1>
+    <h3>2nd Year B.Tech Student | AI & Data Science</h3>
+    <p class="intern">UI/UX Designer & Web Developer Intern</p>
+
+    <p>
+      I am passionate about creating <strong>intuitive, user-friendly, and visually appealing digital experiences</strong>.
+      My interests include full-stack web development, UI/UX design, and applying AI & Data Science in real-world projects.
+      I love turning ideas into functional designs and learning new technologies every day.
+    </p>
+
+    <p>
+      Skills: HTML, CSS, JavaScript, Python, Java, Figma, Frontend & Backend Development, Responsive Design.
+    </p>
+
+    <div class="buttons">
+      <a href="portfolio.html" class="primary-btn">View Projects</a>
+      <a href="contact.html" class="secondary-btn">Get In Touch</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="circle">
+      <img src="images/profile.jpg" alt="Profile Image"/>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT BRIEF -->
+<section class="about-brief">
+  <h2>A Little More About Me</h2>
+  <p>
+    I am a proactive learner and problem solver, with a keen eye for design and detail. I enjoy collaborating on projects that challenge me to think critically and innovate.
+    When I am not coding or designing, I explore and enhance my skills in web technologies.
+  </p>
+</section>
+
+<!-- SOCIAL ICONS -->
+<section class="social-icons" style="text-align:center; margin:50px 0;">
+  <a href="https://github.com/sreevarsha1804" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+  <a href="https://linkedin.com/in/sreevarsha" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+  <a href="mailto:sreevarsha1804@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a>
+</section>
+
+<script src="js/script.js"></script>
+
+
+<!-- Footer placeholder -->
+<div id="footer"></div>
+
+<!-- Script to load footer -->
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+
+</body>
+</html>

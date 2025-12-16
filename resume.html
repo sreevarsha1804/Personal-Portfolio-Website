@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Resume</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .page-container {
+      max-width: 900px;
+      margin: 140px auto 60px; /* pushed down to fit navbar */
+      text-align: center;
+      padding: 60px 40px;
+      background: linear-gradient(135deg, #010627, #4da6ff);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(77, 166, 255, 0.6);
+    }
+
+    .page-container h1 {
+      font-size: 48px;
+      margin-bottom: 40px;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .resume-box {
+      display: inline-block;
+      padding: 25px 50px;
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background: #010627;
+      border-radius: 15px;
+      border: 3px solid #4da6ff;
+      transition: 0.3s ease;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .resume-box:hover {
+      background: #4da6ff;
+      color: #010627;
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #4da6ff;
+    }
+
+    .resume-note {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ✅ NAVBAR ADDED -->
+<header class="navbar">
+  <div class="logo">SreeVarsha AS</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="background.html">Background</a>
+    <a href="skills.html">Skills</a>
+    <a href="portfolio.html">Projects</a>
+    <a href="resume.html" class="active">Resume</a>
+    <a href="contact.html">Contact</a>
+    <button class="cv-btn" onclick="DownloadCV()">Download CV</button>
+  </nav>
+</header>
+
+<div class="page-container">
+  <h1>My Resume</h1>
+
+  <!-- Box Style Download Button -->
+  <a href="resume.pdf" download class="resume-box">📄 Download My Resume</a>
+
+  <p class="resume-note">
+    Click the button above to view or download my complete resume in PDF format.
+  </p>
+</div>
+
+<script src="js/script.js"></script>
+
+<!-- Footer placeholder -->
+<div id="footer"></div>
+
+<!-- Script to load footer -->
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>

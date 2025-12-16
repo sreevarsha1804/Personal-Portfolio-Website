@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html" style="color:#fff; text-decoration:none;">SreeVarsha AS</a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="background.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="portfolio.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <button class="cv-btn" onclick="DownloadCV()">Download CV</button>
+  </nav>
+</header>
+
+<section class="about-content">
+
+  <h1 style="font-size:42px; margin-bottom:30px;">About Me</h1>
+
+  <p>
+    Hello! I’m <strong>SreeVarsha A.S</strong>, a <strong>2nd-year B.Tech student</strong> specializing in
+    <strong>Artificial Intelligence & Data Science</strong>. I am passionate about creating
+    intuitive, visually engaging, and user-centered digital experiences.
+  </p>
+
+  <p>
+    I am a dedicated <strong>UI/UX Designer and Web Developer</strong> with hands-on experience in
+    building responsive and interactive websites using
+    <strong>HTML, CSS, JavaScript, Python, and Java</strong>.
+    I focus on clean design, usability, and consistency across devices.
+  </p>
+
+  <p>
+    I enjoy transforming ideas into functional designs, exploring new tools and technologies,
+    and continuously improving my problem-solving skills through real-world projects.
+    My goal is to grow as a <strong>full-stack developer</strong> while strengthening my expertise
+    in UI/UX and intelligent systems.
+  </p>
+
+  <h2 style="margin-top:40px; font-size:32px;">What I Do</h2>
+  <ul style="margin-top:20px; font-size:22px; line-height:2;">
+    <li>🎨 UI/UX Design with user-centered principles</li>
+    <li>💻 Frontend & Web Development</li>
+    <li>📱 Responsive & Mobile-first Design</li>
+    <li>🚀 Continuous learning & project building</li>
+  </ul>
+
+  <h2 style="margin-top:40px; font-size:32px;">Connect With Me</h2>
+
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/sree-varsha-a-s-1b696b326" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+
+    <a href="https://github.com/sreevarsha1804" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+<!-- Footer placeholder -->
+<div id="footer"></div>
+
+<!-- Script to load footer -->
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>

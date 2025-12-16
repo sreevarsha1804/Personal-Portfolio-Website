@@ -1,0 +1,381 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  background: linear-gradient(135deg, #010627, #0a2a6c, #4da6ff);
+  color: #f8f8f8;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: linear-gradient(90deg, #010627, #01305e);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo a {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbar nav a:hover {
+  color: #4da6ff;
+}
+
+.cv-btn {
+  background: #010627;
+  color: white;
+  padding: 12px 28px;
+  font-size: 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.cv-btn:hover {
+  background: #4da6ff;
+  color: #010627;
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 50px;
+}
+
+.hero-left h1 {
+  font-size: 60px;
+}
+
+.hero-left h1 span {
+  color: #ffffff;
+}
+
+.hero-left h3 {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+.intern {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4da6ff;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 24px;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.buttons a {
+  padding: 18px 36px;
+  border-radius: 12px;
+  font-size: 24px;
+  margin-right: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.primary-btn {
+  background: #4da6ff;
+  color: #010627;
+}
+
+.secondary-btn {
+  border: 3px solid #4da6ff;
+  color: #ffffff;
+}
+
+/* Profile Image */
+.circle {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #4da6ff;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= COMMON ================= */
+.about-content {
+  max-width: 1000px;
+  margin: 60px auto;
+  font-size: 22px;
+}
+
+/* ================= SKILLS ================= */
+.skills-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.skill-box {
+  background: #1a1a3d;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px #010627;
+}
+
+.skill-box h3 {
+  font-size: 26px;
+  color: #4da6ff;
+}
+
+.skill-box p {
+  font-size: 20px;
+}
+
+/* ================= PORTFOLIO ================= */
+.project-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.project {
+  background: #1a1a3d;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project img,
+.project video {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* ================= CONTACT ================= */
+.contact-form {
+  max-width: 600px;
+  margin: 60px auto;
+  background: linear-gradient(135deg, #010627, #4da6ff);
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.contact-form h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 18px;
+  font-size: 24px;
+  border-radius: 14px;
+  border: none;
+  background: #010627;
+  color: #ffffff;
+}
+
+.location {
+  margin-top: 25px;
+  font-size: 22px;
+}
+
+.social-icons {
+  margin-top: 25px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 22px;
+  color: #4da6ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a i {
+  margin-right: 8px;
+  font-size: 26px;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 60%; /* Takes 60% width on larger screens */
+}
+
+.about-social {
+  flex: 1 1 30%; /* Takes 30% width on larger screens */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-social .social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.about-social .social-icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.about-social .social-icons a:hover {
+  color: #0073b1; /* LinkedIn blue on hover */
+}
+
+
+.glass-logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.glass-logo:hover {
+  transform: scale(1.2);
+}
+
+
+.cv-btn {
+  background-color: #001f5b; /* Dark Blue */
+  color: #ffffff;           /* White text */
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;      /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+  background-color: #04082f; /* Slightly lighter blue on hover */
+  transform: translateY(-2px); /* Small lift on hover */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(0,0,0,0.8);
+  color: #f8f8f8;
+  font-size: 16px;
+  border-top: 1px solid #333;
+}
+
+.footer p {
+  margin: 0;
+}
+
+
+/* Footer Styling */
+.footer {
+  background: linear-gradient(135deg, #060344, #1a1a6b);
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  border-top: 1px solid #333;
+  font-size: 16px;
+}
+
+.footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer .footer-social a {
+  color: #fff;
+  margin: 0 10px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer .footer-social a:hover {
+  color: #8683c4;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer .footer-content {
+    gap: 5px;
+  }
+  .footer .footer-social a {
+    margin: 0 8px;
+  }
+}
