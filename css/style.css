@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #8fd3c8, #ffb7a5, #f28ba8);
-  color: #0b1f3b; /* DARK BLUE DEFAULT */
+  background: linear-gradient(to bottom, #3cc7b0, #ad62cd, #f28ba8);
+  color: #08043f; /* DARK BLUE DEFAULT */
   line-height: 1.7;
   min-height: 100vh;
 }
@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 18px 60px;
-  background: rgba(255,255,255,0.75);
+  background: rgb(242, 183, 183);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(0,0,0,0.08);
   position: sticky;
@@ -70,13 +70,13 @@ nav a:hover {
 }
 
 .hero-left h1 span {
-  color: #1d4ed8;
+  color: #040f2f;
 }
 
 .hero-left h3,
 .hero-left p,
 .intern {
-  color: #102a43;
+  color: #070b46;
 }
 
 .buttons a {
@@ -103,7 +103,7 @@ nav a:hover {
   max-width: 1000px;
   margin: 80px auto;
   padding: 45px;
-  background: rgba(255,255,255,0.85);
+  background: rgba(159, 131, 190, 0.85);
   border-radius: 26px;
 }
 
@@ -123,21 +123,21 @@ nav a:hover {
   max-width: 900px;
   margin: 80px auto;
   padding: 45px;
-  background: rgba(255,255,255,0.85);
+  background: rgb(143, 156, 224);
   border-radius: 26px;
 }
 
 .timeline {
-  border-left: 4px solid #2563eb;
+  border-left: 4px solid rgb(4, 23, 63);
   padding-left: 40px;
 }
 
 .timeline-item h3 {
-  color: #1d4ed8;
+  color: #021342;
 }
 
 .timeline-item p {
-  color: #102a43;
+  color: #04223d;
 }
 
 /* ======================= SKILLS (ENHANCED TEXT) ======================= */
@@ -151,7 +151,7 @@ nav a:hover {
 }
 
 .skill-box {
-  background: rgba(255,255,255,0.92);
+  background: rgba(183, 114, 218, 0.92);
   padding: 40px 30px;
   border-radius: 26px;
   text-align: center;
@@ -186,7 +186,7 @@ nav a:hover {
 }
 
 .project {
-  background: rgba(255,255,255,0.94);
+  background: rgba(203, 159, 218, 0.94);
   padding: 28px;
   border-radius: 28px;
   border: 1px solid rgba(37,99,235,0.15);
@@ -217,7 +217,7 @@ nav a:hover {
 }
 
 .contact-card {
-  background: rgba(255,255,255,0.92);
+  background: rgba(177, 147, 216, 0.92);
   padding: 45px;
   border-radius: 28px;
 }
@@ -227,7 +227,7 @@ nav a:hover {
 }
 
 .contact-card p {
-  color: #102a43;
+  color: #100548;
   margin-bottom: 15px;
 }
 
@@ -237,9 +237,9 @@ nav a:hover {
   padding: 14px 16px;
   margin-bottom: 18px;
   border-radius: 10px;
-  border: 1px solid rgba(37,99,235,0.25);
+  border: 1px solid rgb(51, 62, 157);
   font-family: inherit;
-  color: #0b1f3b;
+  color: #0f0b3b;
 }
 
 .contact-card button {
@@ -254,13 +254,13 @@ nav a:hover {
 
 /* ======================= FOOTER ======================= */
 .footer {
-  background: rgba(255,255,255,0.85);
+  background: rgba(232, 194, 210, 0.85);
   padding: 30px 0;
   text-align: center;
 }
 
 .footer p {
-  color: #102a43;
+  color: #0b1042;
 }
 
 /* ======================= RESPONSIVE ======================= */
