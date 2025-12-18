@@ -17,18 +17,75 @@
       color: red;
     }
 
-    /* Map styling */
-    .map-container {
-      max-width: 500px;
-      margin: 30px auto;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 0 25px #010627;
+    /* Wrapper layout */
+    .contact-wrapper {
+      max-width: 1000px;
+      margin: 50px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding: 0 20px;
     }
 
-    .location-text {
-      font-size: 20px;
-      margin-bottom: 20px;
+    .contact-card, .contact-form-card {
+      background-color: #0a0b2b;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 0 25px #010627;
+      flex: 1 1 400px;
+      min-width: 300px;
+      color: #fff;
+    }
+
+    .contact-info h1 {
+      margin-bottom: 10px;
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      border: 0;
+    }
+
+    .contact-form-card form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form-card input,
+    .contact-form-card textarea {
+      padding: 10px 15px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background-color: #f0f0f0;
+      color: #000;
+    }
+
+    .contact-form-card button {
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      background-color: #001f5b;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form-card button:hover {
+      background-color: #0033a0;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+        gap: 25px;
+      }
     }
   </style>
 </head>
@@ -51,45 +108,39 @@
 </header>
 
 <!-- ================= CONTACT SECTION ================= -->
-<section class="contact-form">
-  <h1>Get In Touch</h1>
+<section class="contact-wrapper">
 
-  <!-- Location -->
-  <p class="location-text">
-    📍 Chennai, Tamil Nadu, India
-  </p>
-
-  <!-- Google Map -->
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps?q=Chennai,Tamil Nadu,India&output=embed"
-      width="100%"
-      height="300"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+  <!-- Top card with info & map -->
+  <div class="contact-card">
+    <div class="contact-info">
+      <h1>Get In Touch</h1>
+      <p>📍 Chennai, Tamil Nadu, India</p>
+    </div>
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps?q=Chennai,Tamil Nadu,India&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </div>
 
-  <!-- Contact Card -->
-  <div class="contact-card">
+  <!-- Form card -->
+  <div class="contact-form-card">
     <form id="contactForm">
-
-      <!-- IMPORTANT: name attributes kept SAME for backend -->
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="phone" placeholder="Your Phone Number" required>
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="phone" placeholder="Your Phone Number" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-
     <div id="response"></div>
   </div>
+
 </section>
 
-<!-- ================= BACKEND SCRIPT (UNCHANGED) ================= -->
+<!-- ================= BACKEND SCRIPT ================= -->
 <script>
 const form = document.getElementById('contactForm');
 const responseDiv = document.getElementById('response');
@@ -121,12 +172,10 @@ form.addEventListener('submit', function(e) {
 
 <!-- Footer placeholder -->
 <div id="footer"></div>
-
-<!-- Script to load footer -->
 <script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('footer').innerHTML = data);
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => document.getElementById('footer').innerHTML = data);
 </script>
 
 </body>
